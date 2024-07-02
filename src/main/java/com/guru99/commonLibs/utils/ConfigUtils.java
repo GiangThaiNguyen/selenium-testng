@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class ConfigUtils {
 
-    public Properties readProperty(String fileName) throws IOException {
+    public static Properties readProperty(String fileName) throws IOException {
         InputStream fileReader = Files.newInputStream(Paths.get(fileName));
         Properties property = new Properties();
         property.load(fileReader);

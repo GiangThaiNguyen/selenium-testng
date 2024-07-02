@@ -25,6 +25,8 @@ public class CommonDriver {
         } else {
             throw new Exception("Invalid Browser Type: " + browserType);
         }
+        driver.manage().window().maximize();
+        driver.manage().deleteAllCookies();
     }
 
     public void navigateToUrl(String url) {
@@ -51,5 +53,13 @@ public class CommonDriver {
 
     public void setElementPageLoadTimeout(Duration elementPageLoadTimeout) {
         this.elementPageLoadTimeout = elementPageLoadTimeout;
+    }
+
+    public void closeAllBrowser() {
+        driver.quit();
+    }
+
+    public String getPageTitle() {
+        return driver.getTitle();
     }
 }
