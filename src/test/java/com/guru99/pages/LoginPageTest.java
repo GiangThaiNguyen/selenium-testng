@@ -9,8 +9,8 @@ public class LoginPageTest extends BaseTest{
     public void verifyUserLoginWithTheCorrectCredential() {
         loginPage = new LoginPage(driver);
 
-        String userName = configProperty.getProperty("userNameAccout");
-        String password = configProperty.getProperty("passwordAccout");
+        String userName = configProperty.getProperty("userNameAccount");
+        String password = configProperty.getProperty("passwordAccount");
         loginPage.userLoginWithTheCorrectCredential(userName, password);
 
         String actualTitle = commonDriver.getPageTitle();
